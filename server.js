@@ -8,10 +8,11 @@ const movieRoutes = require('./routes/movies')
 const categoryRoutes = require('./routes/categories')
 const userRoutes = require('./routes/users')
 const bodyParser = require('body-parser')
+var cors = require('cors')
 
 //express app
 const app = express()
-
+app.use(cors())
 //middleware
 app.use(express.json())
 app.use(bodyParser.json())
