@@ -22,9 +22,6 @@ app.use((req, res, next) => {
 })
 //
 //routes
-app.use('/', function(req, res){
-    res.send('WORKING!')
-})
 app.use('/movies', movieRoutes)
 app.use('/categories', categoryRoutes)
 app.use('/user', userRoutes)
