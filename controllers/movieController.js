@@ -41,7 +41,7 @@ const getMovie = async (req, res) => {
 //FETCH movie from external api
 const fetchMovie = async (req, res) => {
     try{
-        const response = await axios.get(`${process.env.REACT_APP_MOVIE_API}${process.env.REACT_APP_MOVIE_API_KEY}&t=${req.params.movie}`);
+        const response = await axios.get(`${process.env.REACT_APP_MOVIE_API}${process.env.REACT_APP_MOVIE_API_KEY}&t=${req.params.movie}`)
         res.status(200).json(response.data)
     }catch (error){
         console.log(error)
